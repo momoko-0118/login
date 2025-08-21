@@ -1,3 +1,6 @@
+/*Actionから呼び出されてDBとやりとりする
+ * 取得した情報はDTOに格納する*/
+
 package com.diworksdev.login.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -13,11 +16,11 @@ public class LoginDAO {
 		DBConnector db=new DBConnector();
 		Connection con=db.getConnection();
 		
-		String sql="select * fron user where user_name=? and password=?";
+		String sql="select * from user where user_name=? and password=?";
 		
 		try {
 			PreparedStatement ps=con.prepareStatement(sql);
-			ps.setString(1, name);
+			ps.setString(1,name);
 			ps.setString(2,password);
 			ResultSet rs=ps.executeQuery();
 			

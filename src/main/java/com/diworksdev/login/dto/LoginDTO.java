@@ -1,3 +1,6 @@
+/*DBから取得した情報を格納する
+ * 情報をActionに渡す*/
+
 package com.diworksdev.login.dto;
 
 public class LoginDTO {
@@ -18,7 +21,7 @@ public class LoginDTO {
 	}
 	
 	public void setName(String name) {
-		this .name=name;
+		this.name=name;
 	}
 	
 	public String getPassword() {
